@@ -30,7 +30,7 @@ public class AppHandler extends TextWebSocketHandler {
 
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-		var closeHandler = commandHandlers.get("close");
+		var closeHandler = commandHandlers.get("session-close");
 		if (closeHandler != null)
 			closeHandler.afterConnectionClosed(session, status);
 	}

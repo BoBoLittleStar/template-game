@@ -12,7 +12,6 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 
 import app.service.AppHandler;
 import app.service.JsonWebSocketHandler;
-import app.service.template.HandlerTemplate;
 
 @Configuration
 @EnableWebSocket
@@ -26,15 +25,6 @@ public class AppConfigurer implements WebSocketConfigurer {
 
 	@Bean
 	public Map<String, JsonWebSocketHandler> createHandler() {
-		var map = new HashMap<String, JsonWebSocketHandler>();
-		// TODO register custom JsonWebSocketHandler here
-		map.put("app", createHandlerTemplate());
-		return map;
-	}
-
-	// Don't forget to add @Bean !!
-	@Bean
-	public HandlerTemplate createHandlerTemplate() {
-		return new HandlerTemplate();
+		return new HashMap<>();
 	}
 }

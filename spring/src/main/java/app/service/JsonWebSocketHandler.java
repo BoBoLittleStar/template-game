@@ -1,5 +1,7 @@
 package app.service;
 
+import java.io.IOException;
+
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
@@ -12,5 +14,5 @@ import com.fasterxml.jackson.databind.JsonNode;
  *
  */
 public abstract class JsonWebSocketHandler extends TextWebSocketHandler {
-	public abstract void handleJsonMessage(WebSocketSession session, JsonNode node);
+	public abstract void handleJsonMessage(WebSocketSession session, JsonNode node) throws IOException;
 }
