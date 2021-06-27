@@ -3,3 +3,5 @@ node_modules
 .idea
 build
 .gradle
+.DS_Store
+gradle-*-bin.zip
