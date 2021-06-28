@@ -22,12 +22,7 @@ public class Builder {
 		return this;
 	}
 
-	public TextMessage toMessage() {
-		try {
-			return new TextMessage(new ObjectMapper().writeValueAsString(map));
-		} catch (JsonProcessingException E) {
-			E.printStackTrace();
-			return null;
-		}
+	public TextMessage toMessage() throws JsonProcessingException {
+		return new TextMessage(new ObjectMapper().writeValueAsString(map));
 	}
 }
