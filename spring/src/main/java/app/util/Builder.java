@@ -22,7 +22,10 @@ public class Builder {
 		return this;
 	}
 
-	public TextMessage toMessage() throws JsonProcessingException {
+	public TextMessage toMessage(String command) throws JsonProcessingException {
+		Map<String, Object> map = new HashMap<>();
+		map.put("command", command);
+		map.put("payload", this.map);
 		return new TextMessage(new ObjectMapper().writeValueAsString(map));
 	}
 }

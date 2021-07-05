@@ -5,3 +5,4 @@ build
 .gradle
 .DS_Store
 gradle-*-bin.zip
+db

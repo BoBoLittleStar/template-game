@@ -1,4 +1,4 @@
-package app.service;
+package app.socket;
 
 import java.io.IOException;
 

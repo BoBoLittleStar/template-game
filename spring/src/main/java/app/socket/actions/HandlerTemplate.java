@@ -1,4 +1,4 @@
-package app.service.template;
+package app.socket.actions;
 
 import java.io.IOException;
 
@@ -9,8 +9,8 @@ import org.springframework.web.socket.WebSocketSession;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import app.service.DataManager;
-import app.service.JsonWebSocketHandler;
+import app.socket.DataManager;
+import app.socket.JsonWebSocketHandler;
 
 /**
  * Pass an arbitrary command code into @Component
