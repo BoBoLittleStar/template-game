@@ -1,12 +1,12 @@
 FROM node
 WORKDIR /web
 COPY package*.json .
-RUN ["npm", "install"]
+RUN npm i
 COPY . .
-RUN ["npm", "run", "build"]
+RUN npm run build
 
 FROM node
 WORKDIR /web
-RUN ["npm", "install", "-g", "serve"]
+RUN npm i -g serve
 COPY --from=0 /web/build .
-ENTRYPOINT ["serve"]
+ENTRYPOINT serve
